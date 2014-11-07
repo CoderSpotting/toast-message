@@ -1,5 +1,5 @@
 {
-    "name": "CoderSpotting/ToastMessage",
+    "name": "coderspotting/toast-message",
     "type": "symfony-bundle",
     "description": "Easy integration of alertify.js in Symfony",
     "keywords": ["form", "extra form", "alertify"],
