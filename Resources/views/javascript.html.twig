@@ -1,0 +1,8 @@
+<script type="application/javascript">
+    $( document ).ready(function()
+    {
+    {% for toast in toasts %}
+    	alertify.success('{{ toast }}');
+    {% endfor %}
+    });
+</script>

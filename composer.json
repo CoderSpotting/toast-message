@@ -1,0 +1,35 @@
+{
+    "name": "CoderSpotting/ToastMessage",
+    "type": "symfony-bundle",
+    "description": "Easy integration of alertify.js in Symfony",
+    "keywords": ["form", "extra form", "alertify"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bavo De Ridder",
+            "email": "bavo@coderspotting.org"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/CoderSpotting/toast-message/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "CoderSpotting\\Bundle\\ToastMessageBundle\\": ""
+        }
+    },
+    "target-dir": "CoderSpotting/Bundle/ToastMessageBundle",
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "symfony/twig-bundle": "~2.3",
+        "symfony/form": "~2.3",
+        "symfony/console": "~2.3"
+    },
+    "suggest":  {
+    },
+    "scripts": {
+    },
+    "extra": {
+    }
+}
