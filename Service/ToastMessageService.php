@@ -2,8 +2,8 @@
 
 namespace CoderSpotting\Bundle\ToastMessageBundle\Service;
 
-use Symfony\Component\DependencyInjection\ContainerAware,
-    Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class ToastMessageService
 {
