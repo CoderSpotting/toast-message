@@ -5,8 +5,10 @@ namespace CoderSpotting\Bundle\ToastMessageBundle\Service;
 use Symfony\Component\DependencyInjection\ContainerAware,
     Symfony\Component\DependencyInjection\ContainerInterface;
 
-class ToastMessageService extends ContainerAware
+class ToastMessageService
 {
+	use ContainerAwareTrait;
+
 	public function __construct(ContainerInterface $container)
 	{
 		$this->setContainer($container);
