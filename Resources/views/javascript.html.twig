@@ -4,7 +4,15 @@
         alertify.logPosition("top right");
 
     {% for toast in toasts %}
-    	alertify.success('{{ toast }}');
+
+        {% if toast.toastType == 'success' %}
+        alertify.success('{{ toast.message }}');
+        {% elseif toast.toastType == 'error' %}
+        alertify.error('{{ toast.message }}');
+        {% else %}
+        alertify.log('{{ toast.message }}');
+        {% endif %}
+
     {% endfor %}
     });
 </script>

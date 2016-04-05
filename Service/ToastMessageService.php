@@ -7,6 +7,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class ToastMessageService
 {
+	const SERVICE_NAME = 'CoderSpotting.ToastMessage';
+
 	use ContainerAwareTrait;
 
 	public function __construct(ContainerInterface $container)
@@ -14,22 +16,45 @@ class ToastMessageService
 		$this->setContainer($container);
 	}
 
-	public function addToast($message)
+	public function addLogToast($message)
+	{
+		$this->addToast('log', $message);
+	}
+
+	public function addSuccessToast($message)
+	{
+		$this->addToast('success', $message);
+	}
+
+	public function addErrorToast($message)
+	{
+		$this->addToast('error', $message);
+	}
+
+	private function addToast($toastType, $message)
+	{
+		$toast = new ToastMessage();
+
+		$toast->setToastType($toastType);
+		$toast->setMessage($message);
+
+		$this->addToastToSession($toast);
+	}
+
+	private function addToastToSession(ToastMessage $toastMessage)
 	{
 		$session = $this->container->get('session');
 
 		$toasts = $session->get('CoderSpotting_ToastMessages');
 
-        if (!isset($toasts))
-        {
-        	$toasts = array();
-        }
+		if (!isset($toasts))
+		{
+			$toasts = array();
+		}
 
-		$toasts[] = $message;
+		$toasts[] = $toastMessage;
 
 		$session->set('CoderSpotting_ToastMessages', $toasts);
-
-		//$session->save();
 
 		return $this;
 	}
