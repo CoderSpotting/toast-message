@@ -1,6 +1,8 @@
 Coderspotting toast-message
 ===========================
 
+A Symfony Bundle to integrate alertify.js (https://alertifyjs.org/) into your project.
+
 Installation
 -----------
 
