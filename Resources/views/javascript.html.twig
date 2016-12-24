@@ -1,16 +1,14 @@
 <script type="application/javascript">
     $( document ).ready(function()
     {
-        alertify.logPosition("top right");
-
     {% for toast in toasts %}
 
         {% if toast.toastType == 'success' %}
-        alertify.success('{{ toast.message }}');
+        alertify.notify('{{ toast.message }}', 'success');
         {% elseif toast.toastType == 'error' %}
-        alertify.error('{{ toast.message }}');
+        alertify.notify('{{ toast.message }}', 'error');
         {% else %}
-        alertify.log('{{ toast.message }}');
+        alertify.notify('{{ toast.message }}');
         {% endif %}
 
     {% endfor %}
