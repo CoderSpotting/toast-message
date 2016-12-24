@@ -1,7 +1,7 @@
 {
     "name": "coderspotting/toast-message",
     "type": "symfony-bundle",
-    "description": "Easy integration of alertify.js in Symfony",
+    "description": "Easy integration of AlertifyJS.com in Symfony",
     "keywords": ["form", "extra form", "alertify"],
     "license": "MIT",
     "authors": [
