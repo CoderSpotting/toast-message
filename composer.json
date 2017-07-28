@@ -21,10 +21,10 @@
     },
     "target-dir": "CoderSpotting/Bundle/ToastMessageBundle",
     "require": {
-        "symfony/framework-bundle": "~2.7 || ~3.0",
-        "symfony/twig-bundle": "~2.7 || ~3.0",
-        "symfony/form": "~2.7 || ~3.0",
-        "symfony/console": "~2.7 || ~3.0"
+        "symfony/framework-bundle": "~2.7 || ^3",
+        "symfony/twig-bundle": "~2.7 || ^3",
+        "symfony/form": "~2.7 || ^3",
+        "symfony/console": "~2.7 || ^3"
     },
     "suggest":  {
     },
